@@ -1,0 +1,26 @@
+<!--The "Merge" tag is what is used for partial layouts
+    and snippets, things that will be included in full layouts.-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--This layout produces tabs.-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:id="@+id/tabLayout">
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </RelativeLayout>
+</merge>

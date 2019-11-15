@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <include layout="@layout/snippet_top_backbutton"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayoutMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutTop">
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile."
+            android:textSize="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/UserProfilePicture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tvEditProfile"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/tvScreenNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/UserProfilePicture"/>
+
+        <EditText
+            android:id="@+id/etScreenName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/UserProfilePicture"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/tvScreenNameLabel" />
+
+        <TextView
+            android:id="@+id/tvUserNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/tvScreenNameLabel"/>
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etScreenName"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/tvUserNameLabel" />
+
+        <TextView
+            android:id="@+id/tvBioLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio:"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/tvUserNameLabel"/>
+
+        <EditText
+            android:id="@+id/etBio"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etUserName"
+            android:layout_alignStart="@+id/etUserName"
+            android:layout_alignEnd="@+id/etScreenName"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/tvBioLabel" />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutMiddle"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvContactInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Contact Information"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/tvEmailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvContactInformation"
+                android:layout_margin="10dp"
+                android:text="email:"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="1142dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvContactInformation"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/tvEmailLabel" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmailLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:text="Save Changes"
+                android:background="@drawable/white_round_button"/>
+
+        </RelativeLayout>
+</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

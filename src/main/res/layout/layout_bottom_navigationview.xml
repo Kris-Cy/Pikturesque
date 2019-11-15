@@ -1,0 +1,24 @@
+<!--The "Merge" tag is what is used for partial layouts
+    and snippets, things that will be included in full layouts.-->
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <!--This is a bottom Navigation view. I talked about all that programmatically
+        has to do with it in all the main class files except the ones in the "Getting Started"
+        package. As it relates to layouts, it requires a menu (in the menu directory) to function.
+        It must also be included on every page that it leads to, and on the layout for every activity
+        it is called in or leads to. The app will crash if it isn't.-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomNavView"
+            app:menu="@menu/bottom_navigation_menu">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </RelativeLayout>
+</merge>

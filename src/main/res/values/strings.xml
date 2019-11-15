@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="string_name">text_string</string>
+    <string name="app_name">Pikturesque</string>
+
+    <string name="dbname_users">users</string>
+    <string name="dbname_useraccounts">user_account</string>
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--A coordinator layout must be used for relative layouts, I think...-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fragments need a viewpager or it won't run right.-->
+    <include layout="@layout/layout_viewpager"/>
+
+    <RelativeLayout
+        android:id="@id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--This one is the entire page-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--This one holds the top bar.-->
+        <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/snippet_user_settings_top"/>
+        </RelativeLayout>
+
+        <!--This one holds the rest of the page.-->
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+            <include layout="@layout/layout_user_settings_middle"></include>
+        </RelativeLayout>
+    </RelativeLayout>
+        <include layout="@layout/layout_bottom_navigationview"/>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,47 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/userProfileToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_black">
+
+                <RelativeLayout
+                    android:id="@+id/wholeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp">
+
+                    <TextView
+                        android:id="@+id/UserToolbarName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:gravity="center_vertical"
+                        android:text="_cy._"
+                        android:textColor="#000000"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/ivSettingsIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="-50dp"
+                        android:layout_toEndOf="@id/UserToolbarName"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/icon_settings" />
+                </RelativeLayout>
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</merge>
